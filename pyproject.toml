@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strdeob"
+version = "0.1.0"
+description = "Static string deobfuscator and IOC extractor for malware triage."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["reverse-engineering", "malware-analysis", "deobfuscation", "strings", "iocs"]
+dependencies = [
+    "rich>=13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5"]
+
+[project.scripts]
+strdeob = "strdeob.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/vvs1off/strdeob"
+Issues = "https://github.com/vvs1off/strdeob/issues"
+
+[tool.setuptools.packages.find]
+include = ["strdeob*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
