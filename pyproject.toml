@@ -7,7 +7,7 @@ name = "strdeob"
 version = "0.1.0"
 description = "Static string deobfuscator and IOC extractor for malware triage."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 keywords = ["reverse-engineering", "malware-analysis", "deobfuscation", "strings", "iocs"]
 dependencies = [
